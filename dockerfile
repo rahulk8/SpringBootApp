@@ -1,5 +1,4 @@
-FROM tomcat:9.0
-COPY target/addressbook-2.0.war /usr/local/tomcat/webapps/
-CMD ["catalina.sh","run"]
+FROM openjdk:11-jdk
+COPY target/SpringBootDemoApp-0.0.1-SNAPSHOT.jar SpringBootDemoApp.jar
+ENTRYPOINT ["java","-jar","/SpringBootDemoApp.jar"]
 EXPOSE 8080
-ubuntu@ip-172-31-45-18:~/addressbook$
